@@ -6,9 +6,10 @@ defutf8 on
 
 backtick 1 60 60 /home/david/bin/battery.sh
 backtick 2 0 0 uname -r
+backtick 3 20 20 whoami
 
 hardstatus alwayslastline
-hardstatus string '%{= kw}[%{= kr}%H%{= kw} %2`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}[Battery:%1`%{r}%{w}][%D %m/%d/%y %c:%s %A %{w}]%{w}'
+hardstatus string '%{= kw}[%{= kR}%3`@%H%{= kw} %2`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}[Battery:%1`%{r}%{w}][%D %m/%d/%y %c:%s%{w}]%{w}'
 
 screen -t bash 0 
 #screen -t ada 1 ssh david@192.168.2.2
