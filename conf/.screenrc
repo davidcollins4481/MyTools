@@ -4,10 +4,10 @@ shelltitle "$ |bash"
 defscrollback 10000
 defutf8 on
 
-backtick 1 60 60 /home/david/bin/battery.sh
+backtick 1 60 60 bin/battery.sh
 backtick 2 0 0 uname -r
 backtick 3 20 20 whoami
-backtick 4 0 0 /home/david/bin/ip.sh
+backtick 4 0 0 bin/ip.sh
 hardstatus alwayslastline
 hardstatus string '%{= kw}[%{= kR}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}[Battery:%1`%{r}%{w}][%D %m/%d/%y %c:%s%{w}]%{w}'
 
