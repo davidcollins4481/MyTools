@@ -1,15 +1,16 @@
 startup_message off
 vbell off
 shelltitle "$ |bash"
-defscrollback 10000
+defscrollback 30000 # Use a 30000-line scrollback buffer
 defutf8 on
 
 backtick 1 60 60 bin/battery.sh
 backtick 2 0 0 uname -r
 backtick 3 20 20 whoami
 backtick 4 0 0 bin/ip.sh
+backtick 5 15 15 bin/cpu.sh
 hardstatus alwayslastline
-hardstatus string '%{= kw}[%{= kR}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}[Battery:%1`%{r}%{w}][%D %m/%d/%y %c:%s%{w}]%{w}'
+hardstatus string '%{= kw}[%{= kR}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}[CPU: %5`][Battery:%1`%{r}%{w}][%D %m/%d/%y %c:%s%{w}]%{w}'
 
 screen -t bash 0 
 #screen -t ada 1 ssh david@192.168.2.2
