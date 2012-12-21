@@ -113,10 +113,10 @@ nnoremap <C-t>     :tabnew<CR>
 inoremap <C-t>     <Esc>:tabnew<CR>
 
 " Previous tab
-nnoremap <F7> :tabp<CR>
-inoremap <F7> <Esc>:tabp<CR>
+nnoremap <C-n> :tabp<CR>
+inoremap <C-n> <Esc>:tabp<CR>
 
 " Next tab
-nnoremap <F8> :tabn<CR>
-inoremap <F8> <Esc>:tabn<CR>
+nnoremap <C-m> :tabn<CR>
+inoremap <C-m> <Esc>:tabn<CR>
 
