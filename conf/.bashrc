@@ -1,5 +1,8 @@
-export PS1="\e[m\u@\h \W\$ \e[m"
-
+#export PS1="\e[m\u@\h \W\$ \e[m"
+# look at the perty colors!
+PS1='\[\e[1;34m\]\u\[\e[36m\]@\[\e[32m\]\h\[\e[30m\]$ \[\e[35m\]\w \[\e[36m\]\$\[\e[0m\] '
+export ADIUM_LOG_DIR=/Users/davidcollins4481/Library/Application\ Support/Adium\ 2.0/Users/Default/Logs
+alias logs='cd "$ADIUM_LOG_DIR"'
 # some system-specific stuff
 OS=`uname -s`
 
