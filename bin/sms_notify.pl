@@ -1,4 +1,4 @@
-#use warnings;
+#!/usr/bin/env perl
 use strict;
 use Google::Voice;
 use YAML qw(LoadFile);
