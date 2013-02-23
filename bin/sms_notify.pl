@@ -11,7 +11,7 @@ my $to_phone;
 my $to_msg;
 
 GetOptions (
-    "to=s" => \$to_phone,
+    "number=s" => \$to_phone,
     "message=s"   => \$to_msg,
 );
 
@@ -29,6 +29,6 @@ $gv = Google::Voice->new->login(
 $gv->send_sms($to_phone => $to_msg);
 
 sub usage {
-    print qq{Usage: sms_notify.pl -t xxxyyyzzzz -m "sms message text"\n};
+    print qq{Usage: sms_notify.pl -n xxxyyyzzzz -m "sms message text"\n};
     exit 1;
 }
