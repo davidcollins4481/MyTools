@@ -3,6 +3,7 @@ use strict;
 use Google::Voice;
 use YAML qw(LoadFile);
 use Getopt::Long;
+use MIME::Base64;
 
 # Google::Voice is spitting out all kinds of stuff...don't want to see it
 BEGIN { $SIG{'__WARN__'} = sub { return; } }
@@ -22,7 +23,7 @@ my $gv;
 
 $gv = Google::Voice->new->login(
     $$config{google_username},
-    $$config{google_password}
+    decode_base64($$config{google_password}),
 );
 
 # Send sms
