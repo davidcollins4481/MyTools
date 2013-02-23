@@ -11,7 +11,7 @@ my $to_phone;
 my $to_msg;
 
 GetOptions (
-    "to=s" => \$to_phone, # numeric
+    "to=s" => \$to_phone,
     "message=s"   => \$to_msg,
 );
 
@@ -24,7 +24,6 @@ $gv = Google::Voice->new->login(
     $$config{google_username},
     $$config{google_password}
 );
-
 
 # Send sms
 $gv->send_sms($to_phone => $to_msg);
