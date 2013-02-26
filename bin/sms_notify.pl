@@ -18,6 +18,7 @@ GetOptions (
 
 usage() if !$to_phone || !$to_msg;
 
+# FIXME use FindBin for this path
 my $config = LoadFile('bin/config.yaml');
 my $gv;
 
