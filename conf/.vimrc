@@ -79,12 +79,12 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256
+
 " Enable syntax highlighting
 syntax enable
 
-"colorscheme desert
-colorscheme distinguished
-set background=dark
+colorscheme nazca
+set background=light
 
 set encoding=utf8
 
@@ -113,10 +113,10 @@ nnoremap <C-t>     :tabnew<CR>
 inoremap <C-t>     <Esc>:tabnew<CR>
 
 " Previous tab
-nnoremap <C-n> :tabp<CR>
-inoremap <C-n> <Esc>:tabp<CR>
+nnoremap <C-o> :tabp<CR>
+inoremap <C-o> <Esc>:tabp<CR>
 
 " Next tab
-nnoremap <C-m> :tabn<CR>
-inoremap <C-m> <Esc>:tabn<CR>
+nnoremap <C-p> :tabn<CR>
+inoremap <C-p> <Esc>:tabn<CR>
 
