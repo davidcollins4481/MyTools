@@ -92,6 +92,17 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Code folding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=indent      " fold based on indent
+set foldnestmax=10         " deepest fold is 10 levels
+set nofoldenable           " don't fold by default
+set foldlevel=1
+" toggle folding with space bar....nicccce
+nnoremap <space> za
+vnoremap <space> zf
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " Use spaces instead of tabs
