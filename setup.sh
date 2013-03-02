@@ -1,18 +1,32 @@
 #!/bin/bash
 
-#battery.sh
-#cpu.sh
-#ip.sh
-#sms_notify.pl
-#XMLTidy.pl
-#.bashrc
-#.screenrc
-#.vimrc
+install_debian_pkgs() {
+    for pkg in `cat $PWD/etc/debian_pkgs`; do
+        is_installed=$(dpkg -s ${pkg} 2>/dev/null | grep 'Status:' | grep 'install ok installed')
+        echo "Checking for: $pkg"
+        if [ "$is_installed" == "" ]; then
+            # package is not installed...install it
+            sudo apt-get install $pkg
+        fi
+    done
+}
+
+# check if we want to install any packages first
+while getopts "s:" opt; do
+    case $opt in
+    s)
+        if [ $OPTARG == "debian" ]; then
+            echo "installing debian packages..."
+            install_debian_pkgs
+        fi
+        ;;
+  esac
+done
 
 # show hidden files
 shopt -s dotglob
 
-echo "Linking config files"
+echo "Symlinking config files..."
 
 for file in $PWD/conf/*; do
     # get the file name
@@ -22,5 +36,6 @@ for file in $PWD/conf/*; do
     mv $HOME/$base $HOME/$base.bak
     ln -s $PWD/conf/$base $HOME
 done
+
 
 
