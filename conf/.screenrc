@@ -5,15 +5,14 @@ defscrollback 5000
 defutf8 on
 
 # the paths for these need adjusted. A ~ relative path is preferable
-backtick 1 60 60 bin/battery.sh
+backtick 1 60 60 $HOME/bin/battery.sh
 backtick 2 0 0 uname -r
 backtick 3 20 20 whoami
-backtick 4 0 0 bin/ip.sh
+backtick 4 0 0 $HOME/bin/ip.sh
 #backtick 5 15 15 bin/cpu.sh
 hardstatus alwayslastline
-hardstatus string '%{= kw}[%{= kR}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}[Battery:%1`%{r}%{w}][%D %m/%d/%y %c:%s%{w}]%{w}'
+hardstatus string '%{= kw}[%{= kG}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}[Battery:%1`%{r}%{w}][%D %m/%d/%y %c:%s%{w}]%{w}'
 
 screen -t bash 0 
-screen -t monolith 1 ssh david@192.168.2.25
+screen -t editor 1
 screen -t documentation 2
-#screen -t music 3
