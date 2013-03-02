@@ -52,5 +52,5 @@ mkdir -p $HOME/.vim/{colors,}
 cp $PWD/extras/nazca.vim $HOME/.vim/colors
 
 echo "done"
-exit 1
+exit 0
 
