@@ -37,5 +37,16 @@ for file in $PWD/conf/*; do
     ln -s $PWD/conf/$base $HOME
 done
 
+echo "Symlinking bin directory"
 
+if [ -d $HOME/bin ]; then
+    # moving it...need this available
+    echo "Moving old bin directory to $HOME/bin_backup"
+    mv $HOME/bin $HOME/bin_backup
+fi
+
+ln -s $PWD/bin $HOME
+
+echo "done"
+exit 1
 
