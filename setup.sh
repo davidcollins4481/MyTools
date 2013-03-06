@@ -48,9 +48,13 @@ fi
 ln -s $PWD/bin $HOME
 
 echo "Copying vim color scheme"
-mkdir -p $HOME/.vim/{colors,}
-cp $PWD/extras/nazca.vim $HOME/.vim/colors
+mkdir -p $HOME/.vim/{colors,plugin,doc,autoload,syntax}
 
+cp $PWD/extras/nazca.vim $HOME/.vim/colors
+cp $PWD/extras/vim_plugins/* $HOME/.vim/plugin
+cp $PWD/extras/vim_docs/* $HOME/.vim/doc
+cp $PWD/extras/vim_autoloads/* $HOME/.vim/autoload
+cp $PWD/extras/vim_syntax/* $HOME/.vim/syntax
 echo "done"
 exit 0
 

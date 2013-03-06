@@ -131,3 +131,5 @@ inoremap <C-o> <Esc>:tabp<CR>
 nnoremap <C-p> :tabn<CR>
 inoremap <C-p> <Esc>:tabn<CR>
 
+" Toggle symbol browser
+nmap <F8> :TagbarToggle<CR>
