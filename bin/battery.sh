@@ -28,6 +28,5 @@ else
     color="\005{R}"
 fi
 
-battery=`echo -e $color "${percentage}%"`
-echo "[Battery:$battery`%{r}%{w}]"
-#echo -e $color "${percentage}%"
+echo -e "[Battery:$color ${percentage}%\005{W}]" 
+
