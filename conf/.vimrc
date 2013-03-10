@@ -111,6 +111,12 @@ set expandtab
 " " Be smart when using tabs ;)
 set smarttab
 
+" Show invisible spaces
+set list
+
+" set invisible characters...not digging defaults
+set listchars=tab:>-,eol:⌉
+
 " " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
