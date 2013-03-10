@@ -12,7 +12,7 @@ backtick 4 0 0 $HOME/bin/ip.sh
 backtick 5 3 3 $HOME/bin/wifi.pl -s "%s"
 #backtick 5 15 15 bin/cpu.sh
 hardstatus alwayslastline
-hardstatus string '%{= kw}[%{= kG}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}%1`[%D %m/%d/%y %c:%s%{w}]%{w}[%{Y}wifi: %5`%%%{w}]'
+hardstatus string '%{= kw}[%{= kG}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}%1`[%D %m/%d/%y %c:%s%{w}]%{w}[%{Y}wifi: %5`%{w}]'
 
 screen -t bash 0 
 #screen -t editor 1

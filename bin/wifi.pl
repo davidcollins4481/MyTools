@@ -25,6 +25,15 @@ my %output;
 ($output{'%i'}, undef, $output{'%l'}, $output{'%s'}, $output{'%n'}) 
     = split(/\s/, $stat_line);
 
+# some cards write dBms
+if (my $strength = $output{'%s'}) {
+    if ($strength < 0) {
+        $output{'%s'} = $strength . 'dBm';
+    } else {
+        $output{'%s'} = $strength . '%';
+    }
+}
+
 if ($format_string) {
    my @options = split(/\s/, $format_string);
    print join " ", @output{@options};

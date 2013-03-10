@@ -84,7 +84,7 @@ set t_Co=256
 syntax enable
 
 colorscheme nazca
-set background=light
+set background=dark
 
 set encoding=utf8
 
