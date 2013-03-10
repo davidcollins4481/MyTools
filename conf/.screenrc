@@ -11,8 +11,8 @@ backtick 3 20 20 whoami
 backtick 4 0 0 $HOME/bin/ip.sh
 #backtick 5 15 15 bin/cpu.sh
 hardstatus alwayslastline
-hardstatus string '%{= kw}[%{= kG}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}[Battery:%1`%{r}%{w}][%D %m/%d/%y %c:%s%{w}]%{w}'
+hardstatus string '%{= kw}[%{= kG}%3`@%H%{= kw} %2` %4`][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ]%{w}%1`[%D %m/%d/%y %c:%s%{w}]%{w}'
 
 screen -t bash 0 
-screen -t editor 1
-screen -t documentation 2
+#screen -t editor 1
+#screen -t documentation 2
