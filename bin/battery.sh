@@ -9,7 +9,7 @@ case "$OS" in
         ;;
     "Linux")
         acpi=`which acpi`
-        if [ $acpi == "" ]; then
+        if [ "$acpi" == "" ]; then
             exit 0
         fi
 
