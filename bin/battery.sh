@@ -8,6 +8,11 @@ case "$OS" in
         percentage=`ioreg -l | grep -i capacity | tr '\n' ' | ' | awk '{printf "%.0f", $10/$5 * 100}'`
         ;;
     "Linux")
+        acpi=`which acpi`
+        if [ "$acpi" == "" ]; then
+            exit 0
+        fi
+
         percentage=`acpi | awk -F", " '{print $2 }' | sed 's|%||g'`
         ;;
     * ) 
@@ -23,6 +28,5 @@ else
     color="\005{R}"
 fi
 
+echo -e "[Battery:$color ${percentage}%\005{W}]" 
 
-
-echo -e $color "${percentage}%"
