@@ -142,3 +142,6 @@ nmap <F8> :TagbarToggle<CR>
 
 " go to symbol browser
 nmap <F9> :TagbarOpen fj<CR>
+
+"Change zen coding plugin expansion key to shift + e
+let g:user_zen_expandabbr_key = '<C-e>'
