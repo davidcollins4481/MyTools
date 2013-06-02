@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/davidcollins4481/Projects/Personal-Site'
+let g:netrw_dirhist_2='/Users/davidcollins4481/Projects/Personal-Site/js'
+let g:netrw_dirhist_3='/Users/davidcollins4481/Projects/Personal-Site/js/projects'
