@@ -1,0 +1,11 @@
+s/new file://g
+s/both added://g
+s/both modified://g
+s/deleted by them://g
+s/modified://g
+s/deleted://g
+s/#//g
+s/\t//g
+s/\t\+//g
+s/ //g
+s/\s\+//g
