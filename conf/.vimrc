@@ -11,6 +11,15 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Show line numbers
+set number
+
+" Highlight all occurrences of a search
+set hlsearch
+
+" Prevent Pydoc preview window
+set completeopt-=preview
+
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
@@ -51,6 +60,11 @@ set ignorecase
 " When searching try to be smart about cases 
 set smartcase
 
+" spelling-checking. Only want spell checking on certain filetypes.
+" Not code
+au BufNewFile,BufRead,BufEnter *.html setlocal spell spelllang=en_us
+au BufNewFile,BufRead,BufEnter *.txt setlocal spell spelllang=en_us
+
 " Highlight search results
 set hlsearch
 
@@ -82,9 +96,9 @@ set t_Co=256
 
 " Enable syntax highlighting
 syntax enable
-
+"colorscheme github
 colorscheme nazca
-set background=dark
+"set background=dark
 
 set encoding=utf8
 
@@ -126,8 +140,8 @@ set lbr
 set tw=500
 
 " tab navigation like firefox
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <C-n>     :tabnew<CR>
+inoremap <C-n>     <Esc>:tabnew<CR>
 
 " Previous tab
 nnoremap <C-o> :tabp<CR>
@@ -137,11 +151,25 @@ inoremap <C-o> <Esc>:tabp<CR>
 nnoremap <C-p> :tabn<CR>
 inoremap <C-p> <Esc>:tabn<CR>
 
-" Toggle symbol browser
-nmap <F8> :TagbarToggle<CR>
+"autocmd VimEnter * nested :call tagbar#autoopen(1)
+autocmd BufEnter * nested :call tagbar#autoopen(0)
+" move tagbar to left
+let g:tagbar_left = 1
 
-" go to symbol browser
-nmap <F9> :TagbarOpen fj<CR>
 
-"Change zen coding plugin expansion key to shift + e
+"Change zen coding plugin expansion key to ctrl + e
 let g:user_zen_expandabbr_key = '<C-e>'
+
+" Pathogen
+execute pathogen#infect()
+
+" git blame
+vmap b :!git blame =expand("%:p")  \| sed -n =line("',=line("'>") p
+
+" SASS plugin
+" au BufRead,BufNewFile *.scss set filetype=scss
+
+"let g:vdebug_options = {}
+"let g:vdebug_options["port"] = 9000
+
+

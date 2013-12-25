@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/davidcollins4481/Projects/Personal-Site'
 let g:netrw_dirhist_2='/Users/davidcollins4481/Projects/Personal-Site/js'
 let g:netrw_dirhist_3='/Users/davidcollins4481/Projects/Personal-Site/js/projects'
+let g:netrw_dirhist_4='/Users/davidcollins4481/Projects/CantonSoftwareMentorship/DavidCollins-Month2-Perl-PrefixCalculator/t'
+let g:netrw_dirhist_5='/Users/davidcollins4481/Projects/CantonSoftwareMentorship/DavidCollins-Month3-Perl-Minesweeper'
+let g:netrw_dirhist_6='/Users/davidcollins4481/Projects/codeeval/easy/ReverseWords'
+let g:netrw_dirhist_7='/Users/davidcollins4481/Desktop/touch-2.3.1/examples/geocongress/app/store'
