@@ -28,5 +28,12 @@ else
     color="\005{R}"
 fi
 
+# check if the battery is charging
+charge_status=`acpi | awk -F: '{print $2}' | awk -F, '{print $1}' | sed 's|^\s||g'`
+
+if [ $charge_status == 'Charging' ]; then
+    color="\005{C}"
+fi
+
 echo -e "[Battery:$color ${percentage}%\005{W}]" 
 
